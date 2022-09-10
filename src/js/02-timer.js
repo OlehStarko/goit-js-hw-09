@@ -43,7 +43,7 @@ function startButtonKlick(data) {
   });
 }
 
-function startCountdownTimer(futureDatetime) {
+function startCountdownTimer(futureDatetime, currentTime) {
   if (isActive) {
     return;
   }
@@ -56,14 +56,14 @@ function startCountdownTimer(futureDatetime) {
     updateHtmlValue(time);
   }, 1000);
 
-  if (
-    daysEl.textContent === '00' &&
-    hoursEl.textContent === '00' &&
-    minutesEl.textContent === '00' &&
-    secondsEl.textContent === '00'
-  ) {
-    clearInterval(intervalId);
-  }
+  // if (
+  //   daysEl.textContent === '00' &&
+  //   hoursEl.textContent === '00' &&
+  //   minutesEl.textContent === '00' &&
+  //   secondsEl.textContent === '00'
+  // ) {
+  //   clearInterval(intervalId);
+  // }
 }
 
 function updateHtmlValue({ days, hours, minutes, seconds }) {

@@ -10,7 +10,7 @@ const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
 const dateInput = document.querySelector('#datetime-picker');
 
-let intervalId = null;
+// let intervalId = null;
 let isActive = false;
 
 startButton.setAttribute('disabled', 'disabled');
@@ -43,7 +43,7 @@ function startButtonKlick(data) {
   });
 }
 
-function startCountdownTimer(futureDatetime, currentTime) {
+function startCountdownTimer(futureDatetime) {
   if (isActive) {
     return;
   }

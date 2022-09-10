@@ -43,7 +43,7 @@ function startButtonKlick(data) {
   });
 }
 
-function startCountdownTimer(futureDatetime) {
+function startCountdownTimer(futureDatetime, currentTime) {
   if (isActive) {
     return;
   }

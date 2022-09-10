@@ -53,16 +53,16 @@ function startCountdownTimer(futureDatetime) {
     const deltaTime = futureDatetime - currentTime;
     const time = convertMs(deltaTime);
     updateHtmlValue(time);
-
-    if (
-      daysEl.textContent === '00' &&
-      hoursEl.textContent === '00' &&
-      minutesEl.textContent === '00' &&
-      secondsEl.textContent === '00'
-    ) {
-      clearInterval(intervalId);
-    }
   }, 1000);
+
+  if (
+    daysEl.textContent === '00' &&
+    hoursEl.textContent === '00' &&
+    minutesEl.textContent === '00' &&
+    secondsEl.textContent === '00'
+  ) {
+    clearInterval(intervalId);
+  }
 }
 
 function updateHtmlValue({ days, hours, minutes, seconds }) {
